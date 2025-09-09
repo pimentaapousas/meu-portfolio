@@ -13,12 +13,6 @@
     />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Contato</a></li>
-      </ul>
-    </nav>
     <section id="about">
       <div style="width: 100%; text-align: center">
         <p>Quem é Diego ?!</p>
@@ -37,10 +31,13 @@
         </div>
       </div>
     </section>
+    <div id="skill-info" v-if="showSkillInfo">
+      <h2 id="skill-name"></h2>
+      <p id="skill-description"></p>
+    </div>
     <footer>
       <p style="text-align: center;">Skills</p>
-      <ul>
-        <li id="skill" />
+      <ul id="skills-list">
       </ul>
     </footer>
   </body>

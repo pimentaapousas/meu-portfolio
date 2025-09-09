@@ -47,3 +47,35 @@ p {
   padding: auto;
   color: #012E40;
 }
+
+#skills-list {
+  justify-content: center;
+}
+
+#skills-list li {
+  background-color: #012E40;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: default;
+}
+
+#skills-list li:hover {
+  background-color: #026773;
+  color: #fff;
+}
+
+#skill-info {
+  width: 50%;
+  height: 50%;
+  top: 20%;
+  left: 25%;
+  margin: auto;
+  vertical-align: middle;
+  position: fixed;
+  z-index: 999;
+  background-color: lightslategray;
+  border-radius: 5px;
+}
+
