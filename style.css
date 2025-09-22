@@ -1,8 +1,16 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#my-name {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
 }
 
 ul {
@@ -12,11 +20,19 @@ ul {
   padding: 0;
 }
 
+#skills li {
+  width: fit-content;
+  background-color: lightblue;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: default;
+}
+
 nav {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  background-color: #012E40;
+  background-color: #012e40;
 }
 
 a {
@@ -29,7 +45,7 @@ a:hover {
 }
 
 #link-about {
-  color: #012E40
+  color: #012e40;
 }
 
 #subtitle p {
@@ -39,11 +55,26 @@ a:hover {
   display: flex;
 }
 
-p {
+main {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+#section-1,
+#section-2 {
+  width: 40%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#section-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  vertical-align: middle;
-  font-family: Caveat;
-  font-size: 50px;
-  padding: auto;
-  color: #012E40;
+  text-align: center;
 }
