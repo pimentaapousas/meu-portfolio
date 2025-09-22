@@ -15,7 +15,7 @@ JavaScript (ES6+) → interatividade e lógica
 
 Clone este repositório:
 
-git clone https://github.com/pimentaapousas/Projeto-1-01.09.git
+git clone https://github.com/pimentaapousas/meu-portfolio.git
 
 Abra o arquivo index.html no navegador.
 
