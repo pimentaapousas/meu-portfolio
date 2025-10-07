@@ -48,26 +48,28 @@ const pages = {
     <div style="margin-top: 2%; display: flex; width: 100%; justify-content: center; gap: 5%">
         <div id="contact-form">
           <img style="width: 3vw" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/480px-LinkedIn_icon.svg.png" />
-          <span>@diegopousas</span>
+          <a href="https://www.linkedin.com/in/diegopousas/" target="_blank">@diegopousas</a>
         </div>
         <div id="contact-form">
           <img style="width: 3vw" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
-          <span>@pimentaapousas</span>
+          <a href="https://github.com/pimentaapousas" target="_blank">@pimentapousas</a>
+
         </div><br>
       </div>
     </div>
+    <span id="feedback-message">E-mail enviado com sucesso !</span>
     <div style="width: 100%; display: grid; justify-content: center; margin-top: 20px">
       <form id="form-email">
         <!-- To simplify the tutorial, the value is static. -->
         <input type="hidden" name="time" value="Mar 10 2025 08:46">
-        <label>Name</label>
+        <label style="margin-top: 10px">Name</label>
         <input type="text" name="name" required>
-        <label>Email</label>
+        <label style="margin-top: 10px">Email</label>
         <input type="email" name="email" required>
         <label>Subject</label>
         <input type="text" name="title" required>
         <label>Message</label>
-        <textarea name="message" required></textarea>
+        <textarea name="message" rows="5" required></textarea>
         <input type="submit" value="Send">
     </form>
     </div>
@@ -82,12 +84,19 @@ const goContact = document
     document
       .getElementById("form-email")
       .addEventListener("submit", function (event) {
-        console.log("chamado");
         event.preventDefault();
+        const feedbackField = document.getElementById("feedback-message");
+        feedbackField.removeAttribute("display");
         // these IDs from the previous steps
         emailjs.sendForm("service_mvvh5jp", "template_gjsge7t", this).then(
           () => {
-            console.log("SUCCESS!");
+            const feedbackField = document.getElementById("feedback-message");
+            feedbackField.style.display = "flex";
+            const formEmail = document.getElementById("form-email")
+            formEmail.reset()
+            setTimeout(() => {
+              feedbackField.style.display = "none";
+            }, 3000);
           },
           (error) => {
             console.log("FAILED...", error);

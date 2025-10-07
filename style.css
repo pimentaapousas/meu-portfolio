@@ -1,7 +1,7 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: auto;
 }
 
@@ -36,7 +36,7 @@ a:hover {
 }
 
 #link-about {
-  color: #012E40
+  color: #012e40;
 }
 
 #subtitle p {
@@ -51,7 +51,7 @@ p {
   vertical-align: middle;
   font-size: 30px;
   padding: auto;
-  color: #012E40;
+  color: #012e40;
 }
 
 #skills-list {
@@ -59,7 +59,7 @@ p {
 }
 
 #skills-list li {
-  background-color: #012E40;
+  background-color: #012e40;
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -70,6 +70,26 @@ p {
 #contact-form {
   display: flex;
   gap: 2%;
+}
+
+#form-email {
+  display: grid;
+  gap: 5px;
+}
+
+form input {
+  width: 100%;
+}
+
+#feedback-message {
+  margin: 2vh auto auto auto;
+  display: none;
+  justify-content: center;
+  width: 30%;
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 #contact-form span {
@@ -95,7 +115,11 @@ img {
   justify-content: center;
   border-radius: 10px;
   transition: transform 0.2s ease; /* suaviza o efeito */
+}
 
+a {
+  color: black;
+  margin: auto;
 }
 
 img:hover {
@@ -113,6 +137,20 @@ footer {
   margin: 20px auto;
 }
 
-input {
-  width: 100%;
+@media (max-width: 1000px) {
+  #album {
+    width: 90%;
+    margin: 10px;
+    text-align: center;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+  }
+
+  img {
+    width: 30%;
+    margin: auto;
+    justify-content: center;
+    border-radius: 10px;
+  }
 }
