@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
     <title>Diego Vieira Pousas</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,33 +17,20 @@
     />
   </head>
   <body>
-    <section id="about">
-      <div style="width: 100%; text-align: center">
-        <p>Quem é Diego ?!</p>
-      </div>
-      <div style="width: 60%; margin: auto; margin-top: 0; text-align: center">
-        Sou um homem de pele branca nascido em Belo Horizonte em 04 de julho de 1991, tenho 34 anos, sou casado.
-        Gosto muito de conhecer novos lugares, viajar, conhecer novas culturas e pessoas.
-        <br /><br />
-      </div>
-    </section>
-    <section id="about">
-      <div style="width: 100%; text-align: center">
-        <p>Minha tragetória profissional</p>
-        <div style="width: 60%; margin: auto; margin-top: 0; text-align: center">
-          Aos 17 anos iniciei minha carreira na empresa de minha família atuando em setores como expedição, estoque e vendas, ao iniciar minha graduação em Administração de empresas, fui contratado como estagiário no Bancodoc onde realizei diversas atividades administrativas como: análise de documentos, suporte a fornecedores sobre documentos exigidos pelos clientes depois foi efetivado e assim minhas atividades foram se deiversificando e oportunidades foram aparecendo e hoje atuo como desenvoldedor web.<br /><br />
-        </div>
-      </div>
-    </section>
-    <div id="skill-info" v-if="showSkillInfo">
-      <h2 id="skill-name"></h2>
-      <p id="skill-description"></p>
-    </div>
-    <footer>
-      <p style="text-align: center;">Skills</p>
-      <ul id="skills-list">
-      </ul>
-    </footer>
+    <nav>
+      <button id="btn-home">Home</button>
+      <button id="btn-contact">Contato</button>
+    </nav>
+    <main id="current-page"></main>
+    <footer>© 2025 Diego Pousas. Todos os direitos reservados.</footer>
   </body>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "Od0NAkIbbf_ftes48",
+      });
+    })();
+  </script>
   <script src="script.js"></script>
 </html>

@@ -13,10 +13,17 @@ ul {
 }
 
 nav {
-  font-size: 20px;
-  display: flex;
+  margin-top: 1%;
   justify-content: center;
-  background-color: #012E40;
+  gap: 10px;
+  display: flex;
+}
+
+nav button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 a {
@@ -42,8 +49,7 @@ a:hover {
 p {
   justify-content: center;
   vertical-align: middle;
-  font-family: Caveat;
-  font-size: 50px;
+  font-size: 30px;
   padding: auto;
   color: #012E40;
 }
@@ -61,21 +67,52 @@ p {
   cursor: default;
 }
 
+#contact-form {
+  display: flex;
+  gap: 2%;
+}
+
+#contact-form span {
+  margin: auto;
+}
+
 #skills-list li:hover {
   background-color: #026773;
   color: #fff;
 }
 
-#skill-info {
-  width: 50%;
-  height: 50%;
-  top: 20%;
-  left: 25%;
+#album {
+  width: 70%;
+  margin: 10px;
+  text-align: center;
   margin: auto;
-  vertical-align: middle;
-  position: fixed;
-  z-index: 999;
-  background-color: lightslategray;
-  border-radius: 5px;
+  display: flex;
 }
 
+img {
+  width: 30%;
+  margin: auto;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 0.2s ease; /* suaviza o efeito */
+
+}
+
+img:hover {
+  /* opacity: 50%; */
+  cursor: pointer;
+  transform: scale(1.5);
+  z-index: 1000;
+  margin: 2%;
+}
+
+footer {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  margin: 20px auto;
+}
+
+input {
+  width: 100%;
+}
