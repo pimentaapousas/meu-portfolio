@@ -1,78 +1,76 @@
 const skill = document.createElement("li");
 const currentPage = document.getElementById("current-page");
 const pages = {
-  home: `
-  <h3 style="text-align: center;">Bem vindo(a) a minha página !</h3>
-  <section id="about">
+  habilities: `
   <div style="width: 100%; text-align: center">
-  <p>Quem é Diego ?!</p>
-  </div>
-  <div
-  style="width: 60%; margin: auto; margin-top: 0; text-align: center"
-  >
-  Sou um homem de pele branca nascido em Belo Horizonte em 04 de julho
-  de 1991, tenho 34 anos, sou casado. Gosto muito de conhecer novos
-  lugares, viajar, conhecer novas culturas e pessoas.
-  <br /><br />
-  </div>
+  <p>Habilidades</p>
+  <section id="about">
+  Abaixo seguem algumas das habilidades que adquiri nos meus 2 anos de trabalho com desenvolvimento web:
+    <ul id="skills" />
   </section>
-  <div id="album">
-  <img src="./assets/danteere.jpeg" alt="renataedante" />
-  <img src="./assets/eu.jpeg" alt="eu" />
-  <img src="./assets/familia.jpeg" alt="familia" />
   </div>
-  <section id="about">
-  <div style="width: 100%; text-align: center">
-  <p>Minha tragetória profissional</p>
-  <div
-  style="width: 60%; margin: auto; margin-top: 0; text-align: center"
-  >
-  Aos 17 anos iniciei minha carreira na empresa de minha família
-  atuando em setores como expedição, estoque e vendas, ao iniciar
-  minha graduação em Administração de empresas, fui contratado como
-  estagiário no Bancodoc onde realizei diversas atividades
-  administrativas como: análise de documentos, suporte a fornecedores
-  sobre documentos exigidos pelos clientes depois foi efetivado e
-  assim minhas atividades foram se deiversificando e oportunidades
-  foram aparecendo e hoje atuo como desenvoldedor web.<br /><br />
-  </div>
-  </div>
-  </section>`,
-  contact: `<div style="width: 100%; text-align: center">
-  <p>Fale comigo</p>
-  <div
-  style="width: 60%; margin: auto; margin-top: 0; text-align: center"
-  >
-  Acesse uma das plataformas abaixo para se comunicar comigo ou até mesmo para saber um pouco mais sobre meu dia-a-dia ou me acompanhe para saber sobre meu crescimento na área.
-  </div>
-    <div style="margin-top: 2%; display: flex; width: 100%; justify-content: center; gap: 5%">
-        <div id="contact-form">
-          <img style="width: 3vw" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/480px-LinkedIn_icon.svg.png" />
-          <a href="https://www.linkedin.com/in/diegopousas/" target="_blank">@diegopousas</a>
-        </div>
-        <div id="contact-form">
-          <img style="width: 3vw" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
-          <a href="https://github.com/pimentaapousas" target="_blank">@pimentapousas</a>
+  `,
+  home: `
+      <h2>Quem é Diego?</h2>
+      <p>
+        Sou um homem de pele branca, nascido em Belo Horizonte em 04 de julho de 1991. Tenho 34 anos, sou casado e gosto muito de conhecer novos lugares, viajar, aprender sobre novas culturas e conhecer pessoas incríveis.
+      </p>
+    </section>
 
-        </div><br>
+    <section id="album">
+      <h2>Momentos</h2>
+      <div class="album-gallery">
+        <img src="./assets/danteere.jpeg" alt="Renata e Dante" />
+        <img src="./assets/eu.jpeg" alt="Eu" />
+        <img src="./assets/familia.jpeg" alt="Família" />
       </div>
+    </section>
+
+    <section id="career">
+      <h2>Minha trajetória profissional</h2>
+      <p>
+        Aos 17 anos iniciei minha carreira na empresa da minha família, atuando em setores como expedição, estoque e vendas. Durante a graduação em Administração de Empresas, fui contratado como estagiário no Bancodoc, onde realizei diversas atividades administrativas — desde análise de documentos até suporte a fornecedores.
+      </p>
+      <p>
+        Após ser efetivado, minhas responsabilidades foram crescendo e novas oportunidades surgiram. Hoje, atuo como desenvolvedor web, unindo minha experiência administrativa ao mundo da tecnologia.
+      </p>
+    </section>`,
+  contact: `<section id="contact">
+  <h2>Fale comigo</h2>
+  <p class="contact-intro">
+    Acesse uma das plataformas abaixo para se comunicar comigo, acompanhar meu dia a dia ou saber mais sobre meu crescimento na área.
+  </p>
+
+  <div class="contact-links">
+    <div class="contact-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/480px-LinkedIn_icon.svg.png" alt="LinkedIn" />
+      <a href="https://www.linkedin.com/in/diegopousas/" target="_blank">@diegopousas</a>
     </div>
-    <span id="feedback-message">E-mail enviado com sucesso !</span>
-    <div style="width: 100%; display: grid; justify-content: center; margin-top: 20px">
-      <form id="form-email">
-        <!-- To simplify the tutorial, the value is static. -->
-        <input type="hidden" name="time" value="Mar 10 2025 08:46">
-        <label style="margin-top: 10px">Name</label>
-        <input type="text" name="name" required>
-        <label style="margin-top: 10px">Email</label>
-        <input type="email" name="email" required>
-        <label>Subject</label>
-        <input type="text" name="title" required>
-        <label>Message</label>
-        <textarea name="message" rows="5" required></textarea>
-        <input type="submit" value="Send">
-    </form>
+    <div class="contact-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+      <a href="https://github.com/pimentaapousas" target="_blank">@pimentapousas</a>
     </div>
+  </div>
+
+  <span id="feedback-message">E-mail enviado com sucesso!</span>
+
+  <form id="form-email">
+    <label>Nome</label>
+    <input type="text" name="name" required />
+
+    <label>E-mail</label>
+    <input type="email" name="email" required />
+
+    <label>Assunto</label>
+    <input type="text" name="title" required />
+
+    <label>Mensagem</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <input type="submit" value="Enviar mensagem" />
+  </form>
+</section>
+
     `,
 };
 currentPage.innerHTML = pages.home;
@@ -111,26 +109,18 @@ const goHome = document
     currentPage.innerHTML = pages.home;
   });
 
-skill.classList.add("skill-badge");
-const skillsList = document.getElementById("skills-list");
 
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Git",
-  "GitHub",
-  "Node.js",
-  "VueJS",
-  "Mongo DB",
-  "Postman",
-];
+const goToHabilities = document.getElementById("btn-habilities").addEventListener("click", () => {
+  currentPage.innerHTML = pages.habilities
 
-const setSkillInfo = (name, description) => {
-  const skillName = document.getElementById("skill-name");
-  const skillDescription = document.getElementById("skill-description");
-  skillName.innerText = name;
-  skillDescription.innerText = description;
-};
+  const skills = ["HTML", "CSS", "Java", "JavaScript", 'nodeJS', 'vueJS', 'mongoDB', 'postman']
+  const skillsList = document.getElementById("skills")
+  
+  skills.forEach(skill => {
+    const skillBadge = document.createElement("li")
+    skillBadge.textContent = skill
+    skillsList.appendChild(skillBadge)
+  });
+  
+})
 
-let showSkillInfo = false;
