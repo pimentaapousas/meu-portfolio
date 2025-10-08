@@ -1,28 +1,77 @@
-🌐 Meu Portfólio de Desenvolvimento Web
+🌐 Portfólio — Diego Vieira Pousas
 
-Este é um projeto de aprendizado e portfólio, onde apresentarrei alguns dos trabalhos que venho desenvolvendo na área de desenvolvimento web.
-O objetivo é praticar HTML, CSS e JavaScript, além de ter um espaço para divulgar minhas habilidades e projetos.
+Este projeto é um site pessoal/portfólio desenvolvido com o objetivo de apresentar minha trajetória, minhas habilidades em desenvolvimento web e oferecer um meio de contato direto via EmailJS.
+O layout foi projetado com uma interface limpa, moderna e responsiva, proporcionando uma experiência agradável em qualquer dispositivo.
 
-🚀 Tecnologias Utilizadas
+📖 Descrição do Projeto
 
-HTML5 → estrutura da página
+O site foi desenvolvido com o foco em simplicidade, fluidez e desempenho.
+Ele é dividido em três seções principais:
 
-CSS3 → estilização e layout
+🏠 Home — Apresentação e informações principais.
 
-JavaScript (ES6+) → interatividade e lógica
+💬 Contato — Formulário funcional de envio de e-mail via EmailJS e links para redes profissionais.
 
-🔧 Como visualizar o projeto
+⚙️ Habilidades — Exibição interativa das tecnologias e ferramentas que domino.
 
-Clone este repositório:
+O objetivo é centralizar minhas informações profissionais em um único local, facilitando o contato e a visualização da minha evolução como desenvolvedor.
 
-git clone https://github.com/pimentaapousas/meu-portfolio.git
+🛠️ Tecnologias Utilizadas
+Categoria	Tecnologias
+Frontend	HTML5, CSS3, JavaScript (puro)
+Integrações	EmailJS
 
-Abra o arquivo index.html no navegador.
+Fontes e Ícones	Google Fonts, Flaticon
+Hospedagem	GitHub Pages
+✉️ Configuração do EmailJS
 
-🎯 Objetivos de Aprendizado
+Para utilizar o formulário de contato com o EmailJS, siga os passos abaixo:
 
-Melhorar a prática em HTML semântico.
+Crie uma conta no EmailJS
+.
 
-Criar layouts responsivos com CSS (Flexbox e Grid).
+No Dashboard, clique em "Add New Service" e conecte o seu provedor de e-mail (por exemplo: Gmail).
 
-Desenvolver funcionalidades interativas com JavaScript.
+Em seguida, crie um template de mensagem:
+
+Vá em Email Templates → Create New Template.
+
+Defina os campos: name, email, title, message.
+
+Copie as informações necessárias:
+
+Service ID
+
+Template ID
+
+Public Key
+
+No seu projeto, inicie o EmailJS no arquivo principal:
+
+(function () {
+  emailjs.init({
+    publicKey: "SUA_PUBLIC_KEY_AQUI",
+  });
+})();
+
+
+No formulário (form-email), defina os name dos campos conforme configurado no seu template.
+
+Pronto! Ao enviar o formulário, a mensagem será enviada diretamente para o seu e-mail cadastrado.
+
+🌍 Site Publicado
+
+🔗 Acesse o portfólio completo:
+👉 https://diegopousas.github.io
+
+💡 Sobre o Desenvolvedor
+
+👨‍💻 Diego Vieira Pousas
+Sou desenvolvedor web com foco em JavaScript, Vue.js e Node.js, com 2 anos de experiência no setor.
+Busco sempre evoluir minhas habilidades e criar soluções que unam eficiência, design e usabilidade.
+
+📫 Me encontre em:
+
+LinkedIn
+
+GitHub
